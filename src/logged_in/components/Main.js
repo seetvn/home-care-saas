@@ -252,7 +252,7 @@ function Main(props) {
     setSelectedTab("Carers");
     if (!hasFetchedCardChart) {
       setHasFetchedCardChart(true);
-      import("../../shared/components/CardChart").then((Component) => {
+      import("../../shared/components/test").then((Component) => {
         setCardChart(Component.default);
       });
     }

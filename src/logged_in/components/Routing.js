@@ -92,18 +92,6 @@ function Routing(props) {
           openAddBalanceDialog={openAddBalanceDialog}
         />
         <PropsRoute
-          path=""
-          component={Dashboard}
-          toggleAccountActivation={toggleAccountActivation}
-          pushMessageToSnackbar={pushMessageToSnackbar}
-          CardChart={CardChart}
-          statistics={statistics}
-          targets={targets}
-          setTargets={setTargets}
-          isAccountActivated={isAccountActivated}
-          selectDashboard={selectDashboard}
-        />
-        <PropsRoute
           path="/c/carers"
           component={Carers}
           toggleAccountActivation={toggleAccountActivation}
@@ -115,6 +103,19 @@ function Routing(props) {
           isAccountActivated={isAccountActivated}
           selectCarers={selectCarers}
         />
+        <PropsRoute
+          path=""
+          component={Dashboard}
+          toggleAccountActivation={toggleAccountActivation}
+          pushMessageToSnackbar={pushMessageToSnackbar}
+          CardChart={CardChart}
+          statistics={statistics}
+          targets={targets}
+          setTargets={setTargets}
+          isAccountActivated={isAccountActivated}
+          selectDashboard={selectDashboard}
+        />
+        
       </Switch>
     </div>
   );
