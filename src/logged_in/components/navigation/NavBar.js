@@ -21,6 +21,8 @@ import withStyles from "@mui/styles/withStyles";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ImageIcon from "@mui/icons-material/Image";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import ElderlyIcon from '@mui/icons-material/Elderly';
+import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import MenuIcon from "@mui/icons-material/Menu";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
@@ -198,6 +200,40 @@ function NavBar(props) {
           />
         ),
         mobile: <AccountBalanceIcon className="text-white" />,
+      },
+    },
+    {
+      // New icon added here
+      link: "/c/patients",
+      name: "Patients",
+      onClick: closeMobileDrawer,
+      icon: {
+        desktop: (
+          <ElderlyIcon
+            className={
+              selectedTab === "Patients" ? classes.textPrimary : "text-white"
+            }
+            fontSize="small"
+          />
+        ),
+        mobile: <ElderlyIcon className="text-white" />,
+      },
+    },
+    {
+      // New icon added here
+      link: "/c/carers",
+      name: "Carers",
+      onClick: closeMobileDrawer,
+      icon: {
+        desktop: (
+          <MedicalServicesIcon
+            className={
+              selectedTab === "Carers" ? classes.textPrimary : "text-white"
+            }
+            fontSize="small"
+          />
+        ),
+        mobile: <MedicalServicesIcon className="text-white" />,
       },
     },
     {

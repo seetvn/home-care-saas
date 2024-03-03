@@ -5,6 +5,7 @@ import withStyles from '@mui/styles/withStyles';
 import Dashboard from "./dashboard/Dashboard";
 import Posts from "./posts/Posts";
 import Subscription from "./subscription/Subscription";
+import Carers from "./carers/Carers"; 
 import PropsRoute from "../../shared/components/PropsRoute";
 import useLocationBlocker from "../../shared/functions/useLocationBlocker";
 
@@ -61,6 +62,7 @@ function Routing(props) {
     setPosts,
     isAccountActivated,
     selectDashboard,
+    selectCarers,
     selectPosts,
     selectSubscription,
     openAddBalanceDialog,
@@ -101,6 +103,18 @@ function Routing(props) {
           isAccountActivated={isAccountActivated}
           selectDashboard={selectDashboard}
         />
+        <PropsRoute
+          path="/c/carers"
+          component={Carers}
+          toggleAccountActivation={toggleAccountActivation}
+          pushMessageToSnackbar={pushMessageToSnackbar}
+          CardChart={CardChart}
+          statistics={statistics}
+          targets={targets}
+          setTargets={setTargets}
+          isAccountActivated={isAccountActivated}
+          selectCarers={selectCarers}
+        />
       </Switch>
     </div>
   );
@@ -123,6 +137,7 @@ Routing.propTypes = {
   targets: PropTypes.arrayOf(PropTypes.object).isRequired,
   isAccountActivated: PropTypes.bool.isRequired,
   selectDashboard: PropTypes.func.isRequired,
+  selectCarers: PropTypes.func.isRequired,
   selectPosts: PropTypes.func.isRequired,
   selectSubscription: PropTypes.func.isRequired,
   openAddBalanceDialog: PropTypes.func.isRequired,

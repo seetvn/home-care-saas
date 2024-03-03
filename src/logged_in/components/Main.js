@@ -246,6 +246,23 @@ function Main(props) {
     setHasFetchedCardChart,
   ]);
 
+  const selectCarers= useCallback(() => {
+    smoothScrollTop();
+    document.title = "WaVer - Carers";
+    setSelectedTab("Carers");
+    if (!hasFetchedCardChart) {
+      setHasFetchedCardChart(true);
+      import("../../shared/components/CardChart").then((Component) => {
+        setCardChart(Component.default);
+      });
+    }
+  }, [
+    setSelectedTab,
+    setCardChart,
+    hasFetchedCardChart,
+    setHasFetchedCardChart,
+  ]);
+
   const selectPosts = useCallback(() => {
     smoothScrollTop();
     document.title = "WaVer - Posts";
@@ -347,6 +364,7 @@ function Main(props) {
           posts={posts}
           targets={targets}
           selectDashboard={selectDashboard}
+          selectCarers={selectCarers}
           selectPosts={selectPosts}
           selectSubscription={selectSubscription}
           openAddBalanceDialog={openAddBalanceDialog}
