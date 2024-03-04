@@ -36,7 +36,7 @@ function calculateMin(data, yKey, factor) {
 const itemHeight = 216;
 const options = ["1 Week$$$", "1 Month", "6 Months"];
 
-function CardChart(props) {
+function test(props) {
   const { color, data, title, classes, theme, height } = props;
   const [anchorEl, setAnchorEl] = useState(null);
   const [selectedOption, setSelectedOption] = useState("1 Month");
@@ -201,7 +201,7 @@ function CardChart(props) {
   );
 }
 
-CardChart.propTypes = {
+test.propTypes = {
   color: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
@@ -210,4 +210,4 @@ CardChart.propTypes = {
   height: PropTypes.string.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(CardChart);
+export default withStyles(styles, { withTheme: true })(test);

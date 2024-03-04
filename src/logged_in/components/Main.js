@@ -229,6 +229,24 @@ function Main(props) {
     setIsAccountActivated(!isAccountActivated);
   }, [pushMessageToSnackbar, isAccountActivated, setIsAccountActivated]);
 
+  const selectCarers= useCallback(() => {
+    smoothScrollTop();
+    document.title = "WaVer - Carers";
+    setSelectedTab("Carers");
+    
+  }, [
+    setSelectedTab,
+  ]);
+
+  const selectPatients= useCallback(() => {
+    smoothScrollTop();
+    document.title = "WaVer - Patients";
+    setSelectedTab("Patients");
+    
+  }, [
+    setSelectedTab,
+  ]);
+
   const selectDashboard = useCallback(() => {
     smoothScrollTop();
     document.title = "WaVer - Dashboard";
@@ -246,22 +264,7 @@ function Main(props) {
     setHasFetchedCardChart,
   ]);
 
-  const selectCarers= useCallback(() => {
-    smoothScrollTop();
-    document.title = "WaVer - Carers";
-    setSelectedTab("Carers");
-    if (!hasFetchedCardChart) {
-      setHasFetchedCardChart(true);
-      import("../../shared/components/test").then((Component) => {
-        setCardChart(Component.default);
-      });
-    }
-  }, [
-    setSelectedTab,
-    setCardChart,
-    hasFetchedCardChart,
-    setHasFetchedCardChart,
-  ]);
+  
 
   const selectPosts = useCallback(() => {
     smoothScrollTop();
@@ -365,6 +368,7 @@ function Main(props) {
           targets={targets}
           selectDashboard={selectDashboard}
           selectCarers={selectCarers}
+          selectPatients={selectPatients}
           selectPosts={selectPosts}
           selectSubscription={selectSubscription}
           openAddBalanceDialog={openAddBalanceDialog}

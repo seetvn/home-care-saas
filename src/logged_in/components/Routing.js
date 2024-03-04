@@ -6,6 +6,7 @@ import Dashboard from "./dashboard/Dashboard";
 import Posts from "./posts/Posts";
 import Subscription from "./subscription/Subscription";
 import Carers from "./carers/Carers"; 
+import Patients from "./patients/Patients"; 
 import PropsRoute from "../../shared/components/PropsRoute";
 import useLocationBlocker from "../../shared/functions/useLocationBlocker";
 
@@ -63,6 +64,7 @@ function Routing(props) {
     isAccountActivated,
     selectDashboard,
     selectCarers,
+    selectPatients,
     selectPosts,
     selectSubscription,
     openAddBalanceDialog,
@@ -94,14 +96,12 @@ function Routing(props) {
         <PropsRoute
           path="/c/carers"
           component={Carers}
-          toggleAccountActivation={toggleAccountActivation}
-          pushMessageToSnackbar={pushMessageToSnackbar}
-          CardChart={CardChart}
-          statistics={statistics}
-          targets={targets}
-          setTargets={setTargets}
-          isAccountActivated={isAccountActivated}
           selectCarers={selectCarers}
+        />
+        <PropsRoute
+          path="/c/patients"
+          component={Patients}
+          selectPatients={selectPatients}
         />
         <PropsRoute
           path=""
@@ -139,6 +139,7 @@ Routing.propTypes = {
   isAccountActivated: PropTypes.bool.isRequired,
   selectDashboard: PropTypes.func.isRequired,
   selectCarers: PropTypes.func.isRequired,
+  selectPatients: PropTypes.func.isRequired,
   selectPosts: PropTypes.func.isRequired,
   selectSubscription: PropTypes.func.isRequired,
   openAddBalanceDialog: PropTypes.func.isRequired,
