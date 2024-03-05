@@ -6,6 +6,7 @@ import Dashboard from "./dashboard/Dashboard";
 import Posts from "./posts/Posts";
 import Subscription from "./subscription/Subscription";
 import Carers from "./carers/Carers"; 
+import NewCarerPage from "./carers/NewCarers";
 import Patients from "./patients/Patients"; 
 import PropsRoute from "../../shared/components/PropsRoute";
 import useLocationBlocker from "../../shared/functions/useLocationBlocker";
@@ -102,6 +103,10 @@ function Routing(props) {
           path="/c/patients"
           component={Patients}
           selectPatients={selectPatients}
+        />
+        <PropsRoute
+          path="/c/new-carer-page"
+          component={NewCarerPage}
         />
         <PropsRoute
           path=""
