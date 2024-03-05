@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -10,7 +10,7 @@ import Paper from '@mui/material/Paper';
 function createData(
   name,
   calories,
-  fat ,
+  fat,
   carbs,
   protein,
 ) {
@@ -25,13 +25,15 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-export default function BasicTable() {
+export default function BasicTable({ carersData }) {
+  const combinedData = [...rows, ...carersData]; // Combine rows and carersData
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell >Carer Name</TableCell>
+            <TableCell>Carer Name</TableCell>
             <TableCell align="right">Phone Number</TableCell>
             <TableCell align="right">Email Address</TableCell>
             <TableCell align="right">Home Address</TableCell>
@@ -39,18 +41,15 @@ export default function BasicTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
+          {combinedData.map((item, index) => (
+            <TableRow key={index}>
               <TableCell component="th" scope="row">
-                {row.name}
+                {item.name || item.emailAddress} {/* Assuming either name or emailAddress exists */}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="right">{item.calories || item.phoneNumber}</TableCell>
+              <TableCell align="right">{item.carbs || "fakemail@fakedomain.uk"}</TableCell>
+              <TableCell align="right">{item.fat || item.homeAddress}</TableCell>
+              <TableCell align="right">{item.protein || item.id}</TableCell>
             </TableRow>
           ))}
         </TableBody>
