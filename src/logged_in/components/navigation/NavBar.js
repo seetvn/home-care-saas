@@ -23,6 +23,7 @@ import ImageIcon from "@mui/icons-material/Image";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import ElderlyIcon from '@mui/icons-material/Elderly';
 import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
+import ReceiptIcon from '@mui/icons-material/Receipt';
 import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import MenuIcon from "@mui/icons-material/Menu";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
@@ -234,6 +235,23 @@ function NavBar(props) {
           />
         ),
         mobile: <MedicalServicesIcon className="text-white" />,
+      },
+    },
+    {
+      // New icon added here
+      link: "/c/invoices",
+      name: "Invoices",
+      onClick: closeMobileDrawer,
+      icon: {
+        desktop: (
+          <ReceiptIcon
+            className={
+              selectedTab === "Invoices" ? classes.textPrimary : "text-white"
+            }
+            fontSize="small"
+          />
+        ),
+        mobile: <ReceiptIcon className="text-white" />,
       },
     },
     {

@@ -13,14 +13,14 @@ function Carers(props) {
       } = props;
       const history = useHistory();
       const location = useLocation();
-      const { formData } = location.state;
+      const formData = location.state ? location.state.formData : {emailAddress:'joebiden@potus.us',phoneNumber:'074355780',homeAddress:'queertown',id:'2344'};
     
-      useEffect(selectCarers, [selectCarers]);
+      useEffect(selectCarers, [selectCarers] );
 
       const handleAddNewCarer = () => {
         // Add logic to handle adding new carer here
         console.log("Add New Carer button clicked");
-        history.push("/c/new-carer-page"); // Specify the path of the new page
+        history.push("/c/new-carer-page" ); // Specify the path of the new page
     };
     // --debug function---
   //   const test_func = () => {
