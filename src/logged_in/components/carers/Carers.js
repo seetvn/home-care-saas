@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import BasicTable from "./CarTable";
 import Button from "@mui/material/Button"; // Import Button component from Material-UI
 import Grid from "@mui/material/Grid"; // Import Grid component from Material-UI
-import { useHistory } from 'react-router-dom'; 
-import { useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'; // allows re-routing
+import { useLocation } from 'react-router-dom';// allows data to be passed among different pages
 
 
 function Carers(props) {
