@@ -1,20 +1,36 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { Paper, Typography, Avatar, Grid } from "@mui/material";
+import { Paper, Typography, Avatar, Grid, Button } from "@mui/material";
+import { useHistory } from 'react-router-dom';
+import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 
 function Profile(props) {
     const {
         selectProfile,
+        fromCarersPage,
+        classes
         } = props;
+
+        const history = useHistory();
 
         useEffect(selectProfile, [selectProfile]);
 
+        const handleGoBack = () => {
+            history.goBack();
+        };
+
         return (
             <Paper elevation={3} style={{ padding: 20, margin: 20 }}>
+              {/* Go back button */}
+              <Grid container justifyContent="left" marginBottom={2}>
+                <Button variant="contained" onClick={handleGoBack} >
+                    Go back
+                </Button> 
+              </Grid>
               {/* Profile Picture */}
               <Grid container justifyContent="center" marginBottom={2}>
                 <Avatar
-                alt="Profile Picture"
+                //alt="Profile Picture"
                 src="/path/to/profile-picture.jpg" // Replace with the path to your profile picture
                 sx={{ width: 200, height: 200, marginBottom: 10 }}
                 />
@@ -61,12 +77,19 @@ function Profile(props) {
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </Typography>
               </Grid>
+
+            {/* Highlight the source page icon if it's from the "Carers" page */}
+            {fromCarersPage && (
+                <MedicalServicesIcon className={classes.textPrimary} fontSize="small" />
+            )}
             </Paper>
           );
 }
 
 Profile.propTypes = {
     selectPatients: PropTypes.func.isRequired,
+    fromCarersPage: PropTypes.bool.isRequired, // Add the prop type for fromCarersPage
+    classes: PropTypes.object.isRequired,
     // Add more prop types as needed for additional profile information
 };
 

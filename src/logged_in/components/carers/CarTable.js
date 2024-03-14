@@ -6,6 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Link } from 'react-router-dom'; // Import Link component from React Router
 
 function createData(
   name,
@@ -42,8 +43,7 @@ export default function BasicTable({ carersData }) {
         </TableHead>
         <TableBody>
           {combinedData.map((item, index) => (
-            <TableRow key={index}>
-              <TableCell component="th" scope="row">
+            <TableRow key={index} component={Link} to="/c/profile"> {/* Add Link to profile page */}   <TableCell component="th" scope="row">
                 {item.name || item.emailAddress} {/* Assuming either name or emailAddress exists */}
               </TableCell>
               <TableCell align="right">{item.calories || item.phoneNumber}</TableCell>
