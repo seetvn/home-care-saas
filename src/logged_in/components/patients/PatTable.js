@@ -6,6 +6,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Link } from 'react-router-dom'; // Import Link component from React Router
+
 
 function createData(
   name,
@@ -40,10 +42,7 @@ export default function BasicTable() {
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
+              <TableRow component={Link} to="/c/profile"> {/* Add Link to profile page */} 
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
