@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from "prop-types";
+import { useHistory } from 'react-router-dom';
 
 const GoogleMap = ({ apiKey, zoom, center, pinLocations }) => {
   const mapRef = useRef(null);
+  const history = useHistory();
 
   useEffect(() => {
     const googleScript = document.createElement('script');
@@ -16,27 +18,26 @@ const GoogleMap = ({ apiKey, zoom, center, pinLocations }) => {
         zoom,
         center,
       });
-      
 
       // Add pins to the map
-      pinLocations.forEach((pin) => {
-        new window.google.maps.Marker({
+      pinLocations.forEach((pin, index) => {
+        const marker = new window.google.maps.Marker({
           position: pin,
           map,
         });
+
+        // Add click event listener to the marker
+        marker.addListener('click', () => {
+          // Navigate to another page when marker is clicked
+          history.push(`/c/profile`); // Example navigation to details page with index as parameter
+        });
       });
-      
-      // new window.google.maps.Marker({
-      //   position: center,
-      //   map,
-      // });
     };
-    //document.body.appendChild(googleScript);
 
     return () => {
       document.body.removeChild(googleScript);
     };
-  }, [apiKey, zoom, center, pinLocations]);
+  }, [apiKey, zoom, center, pinLocations, history]);
 
   return <div ref={mapRef} style={{ width: '100%', height: '600px' }} />;
 };
