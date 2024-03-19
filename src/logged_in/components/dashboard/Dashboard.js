@@ -5,6 +5,7 @@ import SettingsArea from "./SettingsArea";
 import UserDataArea from "./UserDataArea";
 import AccountInformationArea from "./AccountInformationArea";
 import StatisticsArea from "./StatisticsArea";
+import GoogleMap from "./GoogleMap";
 
 function Dashboard(props) {
   const {
@@ -43,6 +44,23 @@ function Dashboard(props) {
         targets={targets}
         setTargets={setTargets}
       />
+      <Box mt={4}>
+        <Typography variant="subtitle1" gutterBottom>
+          Today's Scheduled Visits
+        </Typography>
+        <GoogleMap
+          apiKey="AIzaSyBC9lP5hl9rBZbW4jNn-8x_edNzjFfZ3og"
+          zoom={14}
+          center={{ lat: 51.3813, lng: -2.3625 }}
+          pinLocations={[
+            { lat: 51.381, lng: -2.363 }, // Example pin location
+            { lat: 51.385, lng: -2.364 }, // Another example pin location
+            { lat: 51.385, lng: -2.374 },
+            { lat: 51.379, lng: -2.376 },
+            // Add more pin locations as needed
+          ]}
+        />
+      </Box>
     </Fragment>
   );
 }
