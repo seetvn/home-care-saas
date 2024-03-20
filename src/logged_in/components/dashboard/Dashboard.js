@@ -6,6 +6,7 @@ import UserDataArea from "./UserDataArea";
 import AccountInformationArea from "./AccountInformationArea";
 import StatisticsArea from "./StatisticsArea";
 import GoogleMap from "./GoogleMap";
+import Timeline from './Timeline';
 
 function Dashboard(props) {
   const {
@@ -44,6 +45,13 @@ function Dashboard(props) {
         targets={targets}
         setTargets={setTargets}
       />
+      <Box mt={4}>
+        <Typography variant="subtitle1" gutterBottom>
+          Today's Scheduled Visits
+        </Typography>
+        {/* Render the Timeline component */}
+        <Timeline/>
+      </Box>
       <Box mt={4}>
         <Typography variant="subtitle1" gutterBottom>
           Today's Scheduled Visits

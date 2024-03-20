@@ -8,6 +8,7 @@ const GoogleMap = ({ apiKey, zoom, center, pinLocations }) => {
 
   useEffect(() => {
     const googleScript = document.createElement('script');
+
     googleScript.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}`;
     googleScript.async = true;
 
@@ -58,3 +59,4 @@ GoogleMap.propTypes = {
 };
 
 export default GoogleMap;
+
