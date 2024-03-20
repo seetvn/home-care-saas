@@ -11,20 +11,23 @@ import { Link } from 'react-router-dom'; // Import Link component from React Rou
 
 function createData(
   name,
-  calories,
-  fat ,
-  carbs,
-  protein,
+  phoneNumber,
+  emailAddress,
+  homeAddress,
+  ID
 ) {
-  return { name, calories, fat, carbs, protein };
+  return { name, phoneNumber, emailAddress, homeAddress };
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('Alice Johnson', '+44 20 1234 5678', 'alice.johnson@example.com', '123 Main St, London, England', 'PAT001'),
+  createData('Benjamin Smith', '+44 20 2345 6789', 'benjamin.smith@example.com', '456 Elm St, Brighton, England', 'PAT002'),
+  createData('Charlotte Brown', '+44 20 3456 7890', 'charlotte.brown@example.com', '789 Oak St, Southampton, England', 'PAT003'),
+  createData('Daniel Wilson', '+44 20 4567 8901', 'daniel.wilson@example.com', '012 Pine St, Portsmouth, England', 'PAT004'),
+  createData('Emma Taylor', '+44 20 5678 9012', 'emma.taylor@example.com', '345 Maple St, Bristol, England', 'PAT005'),
+  createData('Freya Clark', '+44 20 6789 0123', 'freya.clark@example.com', '678 Birch St, Plymouth, England', 'PAT006'),
+  createData('George Wright', '+44 20 7890 1234', 'george.wright@example.com', '901 Cedar St, Exeter, England', 'PAT007'),
+  createData('Hannah Thomas', '+44 20 8901 2345', 'hannah.thomas@example.com', '234 Oak St, Bournemouth, England', 'PAT008'),
 ];
 
 export default function BasicTable() {
@@ -37,7 +40,6 @@ export default function BasicTable() {
             <TableCell align="right">Phone Number</TableCell>
             <TableCell align="right">Email Address</TableCell>
             <TableCell align="right">Home Address</TableCell>
-            <TableCell align="right">ID</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -46,10 +48,9 @@ export default function BasicTable() {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="right">{row.phoneNumber}</TableCell>
+              <TableCell align="right">{row.emailAddress}</TableCell>
+              <TableCell align="right">{row.homeAddress}</TableCell>
             </TableRow>
           ))}
         </TableBody>

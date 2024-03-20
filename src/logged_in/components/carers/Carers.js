@@ -36,7 +36,7 @@ function Carers(props) {
               </Button>
             </Grid>
           <br /> {/* Add line break for spacing */}
-          <BasicTable carersData={[formData]}/>
+          <BasicTable carersData={[]}/>
         </Fragment>
       );
     }
