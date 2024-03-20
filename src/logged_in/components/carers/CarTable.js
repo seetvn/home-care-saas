@@ -10,21 +10,22 @@ import { Link } from 'react-router-dom'; // Import Link component from React Rou
 
 function createData(
   name,
-  calories,
-  fat,
-  carbs,
-  protein,
+  phoneNumber,
+  emailAddress,
+  homeAddress,
+  ID
 ) {
-  return { name, calories, fat, carbs, protein };
+  return { name, phoneNumber, emailAddress, homeAddress };
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('John Doe', '+44 20 1234 5678', 'john.doe@example.com', '123 Main St, London, England', 'ABC123'),
+  createData('Jane Smith', '+44 20 2345 6789', 'jane.smith@example.com', '456 Elm St, Brighton, England', 'DEF456'),
+  createData('Michael Johnson', '+44 20 3456 7890', 'michael.johnson@example.com', '789 Oak St, Southampton, England', 'GHI789'),
+  createData('Emily Brown', '+44 20 4567 8901', 'emily.brown@example.com', '012 Pine St, Portsmouth, England', 'JKL012'),
+  createData('David Wilson', '+44 20 5678 9012', 'david.wilson@example.com', '345 Maple St, Bristol, England', 'MNO345'),
 ];
+
 
 export default function BasicTable({ carersData }) {
   const combinedData = [...rows, ...carersData]; // Combine rows and carersData
@@ -38,18 +39,16 @@ export default function BasicTable({ carersData }) {
             <TableCell align="right">Phone Number</TableCell>
             <TableCell align="right">Email Address</TableCell>
             <TableCell align="right">Home Address</TableCell>
-            <TableCell align="right">ID</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {combinedData.map((item, index) => (
             <TableRow key={index} component={Link} to="/c/profile"> {/* Add Link to profile page */}   <TableCell component="th" scope="row">
-                {item.name || item.emailAddress} {/* Assuming either name or emailAddress exists */}
+                {item.name} {/* Assuming either name or emailAddress exists */}
               </TableCell>
-              <TableCell align="right">{item.calories || item.phoneNumber}</TableCell>
-              <TableCell align="right">{item.carbs || "fakemail@fakedomain.uk"}</TableCell>
-              <TableCell align="right">{item.fat || item.homeAddress}</TableCell>
-              <TableCell align="right">{item.protein || item.id}</TableCell>
+              <TableCell align="right">{item.phoneNumber}</TableCell>
+              <TableCell align="right">{item.emailAddress}</TableCell>
+              <TableCell align="right">{item.homeAddress}</TableCell>
             </TableRow>
           ))}
         </TableBody>
