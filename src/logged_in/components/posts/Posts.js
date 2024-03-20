@@ -1,60 +1,55 @@
-import React, { useState, useCallback, useEffect } from "react";
-import PropTypes from "prop-types";
-import PostContent from "./PostContent";
-import AddPost from "./AddPost";
+import * as React from 'react';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
-function Posts(props) {
-  const {
-    selectPosts,
-    EmojiTextArea,
-    ImageCropper,
-    Dropzone,
-    DateTimePicker,
-    pushMessageToSnackbar,
-    posts,
-    setPosts,
-  } = props;
-  const [isAddPostPaperOpen, setIsAddPostPaperOpen] = useState(false);
-
-  const openAddPostModal = useCallback(() => {
-    setIsAddPostPaperOpen(true);
-  }, [setIsAddPostPaperOpen]);
-
-  const closeAddPostModal = useCallback(() => {
-    setIsAddPostPaperOpen(false);
-  }, [setIsAddPostPaperOpen]);
-
-  useEffect(() => {
-    selectPosts();
-  }, [selectPosts]);
-
-  if (isAddPostPaperOpen) {
-    return <AddPost
-      onClose={closeAddPostModal}
-      EmojiTextArea={EmojiTextArea}
-      ImageCropper={ImageCropper}
-      Dropzone={Dropzone}
-      DateTimePicker={DateTimePicker}
-      pushMessageToSnackbar={pushMessageToSnackbar}
-    />
-  }
-  return <PostContent
-    openAddPostModal={openAddPostModal}
-    posts={posts}
-    setPosts={setPosts}
-    pushMessageToSnackbar={pushMessageToSnackbar}
-  />
+function createData(carerName,clientName,address,view) {
+  return { carerName, clientName, address, view };
 }
 
-Posts.propTypes = {
-  EmojiTextArea: PropTypes.elementType,
-  ImageCropper: PropTypes.elementType,
-  Dropzone: PropTypes.elementType,
-  DateTimePicker: PropTypes.elementType,
-  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
-  setPosts: PropTypes.func.isRequired,
-  pushMessageToSnackbar: PropTypes.func,
-  selectPosts: PropTypes.func.isRequired,
-};
+const rows = [
+  createData('Sheldon Cooper','Demitrus Johnson','123 Avenue','link'),
+  createData('Patrick Bateman','Leroy Jenkins','321 Avenue','link'),
+  createData('Victor Timely','Demitrus Johnson Jr','123 Avenue','link'),
+  createData('Robert Henley','Michael Balzac','12 Hilburn','link')
+];
 
-export default Posts;
+export default function BasicTable() {
+  return (
+    <div>
+      <h1>Upcoming visits uwu</h1>
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell align="left">Carer</TableCell>
+            <TableCell align="left">Client</TableCell>
+            <TableCell align="left">Address</TableCell>
+            <TableCell align="left">View</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow
+              key={row.carerName}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              {/* <TableCell component="th" scope="row">
+                {row.carerName}
+              </TableCell> */}
+              <TableCell align="left">{row.carerName}</TableCell>
+              <TableCell align="lef">{row.clientName}</TableCell>
+              <TableCell align="left">{row.address}</TableCell>
+              <TableCell align="left">{row.view}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+    </div>
+  );
+}
