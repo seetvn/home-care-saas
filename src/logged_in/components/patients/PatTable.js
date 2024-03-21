@@ -44,7 +44,7 @@ export default function BasicTable() {
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-              <TableRow component={Link} to="/c/profile"> {/* Add Link to profile page */} 
+              <TableRow component={Link} to="/c/patientprofile"> {/* Add Link to profile page */} 
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>

@@ -3,18 +3,18 @@ import PropTypes from "prop-types";
 import { Paper, Typography, Avatar, Grid, Button } from "@mui/material";
 import { useHistory } from 'react-router-dom';
 import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
-import Carer from './samantha.jpg'
+import womanImage from './mike.jpg';
 
-function Profile(props) {
+function PatientProfile(props) {
     const {
-        selectProfile,
+        selectPatientProfile,
         fromCarersPage,
         classes
         } = props;
 
         const history = useHistory();
 
-        useEffect(selectProfile, [selectProfile]);
+        useEffect(selectPatientProfile, [selectPatientProfile]);
 
         const handleGoBack = () => {
             history.goBack();
@@ -32,7 +32,7 @@ function Profile(props) {
               <Grid container justifyContent="center" marginBottom={2}>
                 <Avatar
                 //alt="Profile Picture"
-                src={Carer} // Replace with the path to your profile picture
+                src={womanImage} // Replace with the path to your profile picture
                 sx={{ width: 200, height: 200, marginBottom: 10 }}
                 />
               </Grid>
@@ -42,11 +42,11 @@ function Profile(props) {
                 {/* First row */}
                 <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
                   <Typography align="center" variant="subtitle1">Name:</Typography>
-                  <Typography align="center" variant="body1">Samantha Keir</Typography>
+                  <Typography align="center" variant="body1">Jane Doe</Typography>
                 </Grid>
                 <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
                   <Typography align="center" variant="subtitle1">Date of Birth:</Typography>
-                  <Typography align="center" variant="body1">January 1, 1980</Typography>
+                  <Typography align="center" variant="body1">January 1, 1950</Typography>
                 </Grid>
 
                 {/* First row */}
@@ -56,17 +56,17 @@ function Profile(props) {
                 </Grid>
                 <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
                   <Typography align="center" variant="subtitle1">Address:</Typography>
-                  <Typography align="center" variant="body1">124 Main St, Bath, UK</Typography>
+                  <Typography align="center" variant="body1">123 Main St, Bath, UK</Typography>
                 </Grid>
                 
                 {/* First row */}
                 <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
                   <Typography align="center" variant="subtitle1">Recommended By:</Typography>
-                  <Typography align="center" variant="body1">John Nuts</Typography>
+                  <Typography align="center" variant="body1">Lisa Bells</Typography>
                 </Grid>
                 <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
-                  <Typography align="center" variant="subtitle1">Availability</Typography>
-                  <Typography align="center" variant="body1">Monday - Friday</Typography>
+                  <Typography align="center" variant="subtitle1">Care Type:</Typography>
+                  <Typography align="center" variant="body1">Live In Care</Typography>
                 </Grid>
                         
                 {/* Second row */}
@@ -76,52 +76,26 @@ function Profile(props) {
                 </Grid>
                 <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
                   <Typography align="center" variant="subtitle1">Email:</Typography>
-                  <Typography align="center" variant="body1">sam56@example.com</Typography>
+                  <Typography align="center" variant="body1">jane333@example.com</Typography>
                 </Grid>
         
                 {/* Third row */}
                 <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
-                  <Typography align="center" variant="subtitle1">Care Type:</Typography>
-                  <Typography align="center" variant="body1">Night Care</Typography>
+                  <Typography align="center" variant="subtitle1">Emergency Contact Name:</Typography>
+                  <Typography align="center" variant="body1">Lisa Bells</Typography>
                 </Grid>
                 <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
-                  <Typography align="center" variant="subtitle1">Recommended By:</Typography>
-                  <Typography align="center" variant="body1">Tom Whistle</Typography>
-                </Grid>
-
-                <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
-                  <Typography align="center" variant="subtitle1">DBS Date:</Typography>
-                  <Typography align="center" variant="body1">21/07/22</Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
-                  <Typography align="center" variant="subtitle1">National Insurance Number:</Typography>
-                  <Typography align="center" variant="body1">SD7438208346</Typography>
-                </Grid>
-
-                <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
-                  <Typography align="center" variant="subtitle1">UTR Number:</Typography>
-                  <Typography align="center" variant="body1">234 68766 45543 A</Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
-                  <Typography align="center" variant="subtitle1">Qualification:</Typography>
-                  <Typography align="center" variant="body1">BSc Nursing - UWE</Typography>
-                </Grid>
-
-                <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
-                  <Typography align="center" variant="subtitle1">Other Current Job:</Typography>
-                  <Typography align="center" variant="body1">None</Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ borderBottom: '1px solid lightgrey', borderTop: '1px solid lightgrey', paddingTop: 2, paddingBottom: 2 }}>
-                  <Typography align="center" variant="subtitle1">Visa Status:</Typography>
-                  <Typography align="center" variant="body1">UK Citizen</Typography>
+                  <Typography align="center" variant="subtitle1">Emergency Contract Phone Number:</Typography>
+                  <Typography align="center" variant="body1">0756712566</Typography>
                 </Grid>
               </Grid>
               <Grid container justifyContent="left" marginBottom={2} marginTop={2} marginLeft={2}>
                 <Typography variant="subtitle1">Notes:</Typography>
               </Grid>
+              
               <Grid container justifyContent="left" marginBottom={2} marginTop={2} marginLeft={2}>
                 <Typography align="left" variant="body1">
-                Leave requested for 25/05/2024.
+                 Patient has had trouble sleeping for the last week due to hip pain. Recommendation for potential check up.
                 </Typography>
               </Grid>
 
@@ -133,11 +107,11 @@ function Profile(props) {
           );
 }
 
-Profile.propTypes = {
+PatientProfile.propTypes = {
     selectPatients: PropTypes.func.isRequired,
     fromCarersPage: PropTypes.bool.isRequired, // Add the prop type for fromCarersPage
     classes: PropTypes.object.isRequired,
     // Add more prop types as needed for additional profile information
 };
 
-export default Profile;
+export default PatientProfile;

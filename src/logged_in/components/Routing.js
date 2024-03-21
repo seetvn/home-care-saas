@@ -10,6 +10,7 @@ import NewCarerPage from "./carers/NewCarers";
 import Patients from "./patients/Patients"; 
 import Invoices from "./invoices/Invoices"; 
 import Profile from "./profile/Profile"; 
+import PatientProfile from "./patientprofile/PatientProfile"; 
 import PropsRoute from "../../shared/components/PropsRoute";
 import useLocationBlocker from "../../shared/functions/useLocationBlocker";
 
@@ -70,6 +71,7 @@ function Routing(props) {
     selectPatients,
     selectInvoices,
     selectProfile,
+    selectPatientProfile,
     selectPosts,
     selectSubscription,
     openAddBalanceDialog,
@@ -123,6 +125,11 @@ function Routing(props) {
           selectProfile={selectProfile}
         />
         <PropsRoute
+          path="/c/patientprofile"
+          component={PatientProfile}
+          selectPatientProfile={selectPatientProfile}
+        />
+        <PropsRoute
           path=""
           component={Dashboard}
           toggleAccountActivation={toggleAccountActivation}
@@ -161,6 +168,7 @@ Routing.propTypes = {
   selectPatients: PropTypes.func.isRequired,
   selectInvoices: PropTypes.func.isRequired,
   selectProfile: PropTypes.func.isRequired,
+  selectPatientProfile: PropTypes.func.isRequired,
   selectPosts: PropTypes.func.isRequired,
   selectSubscription: PropTypes.func.isRequired,
   openAddBalanceDialog: PropTypes.func.isRequired,

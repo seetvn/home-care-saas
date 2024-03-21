@@ -256,6 +256,15 @@ function Main(props) {
     setSelectedTab,
   ]);
 
+  const selectPatientProfile= useCallback(() => {
+    smoothScrollTop();
+    document.title = "WaVer - Patient Profile";
+    setSelectedTab("PatientProfile");
+    
+  }, [
+    setSelectedTab,
+  ]);
+
   const selectInvoices= useCallback(() => {
     smoothScrollTop();
     document.title = "WaVer - Invoices";
@@ -389,6 +398,7 @@ function Main(props) {
           selectDashboard={selectDashboard}
           selectCarers={selectCarers}
           selectPatients={selectPatients}
+          selectPatientProfile={selectPatientProfile}
           selectInvoices={selectInvoices}
           selectProfile = {selectProfile}
           selectPosts={selectPosts}

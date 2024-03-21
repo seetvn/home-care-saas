@@ -5,9 +5,9 @@ import SettingsArea from "./SettingsArea";
 import UserDataArea from "./UserDataArea";
 import AccountInformationArea from "./AccountInformationArea";
 import StatisticsArea from "./StatisticsArea";
-import Map from "./GoogleMap";
 import Timeline from './Timeline';
 import SimpleMap from "./GoogleMap";
+import Scheduler from "./Calender"
 
 function Dashboard(props) {
   const {
@@ -51,7 +51,8 @@ function Dashboard(props) {
           Today's Scheduled Visits
         </Typography>
         {/* Render the Timeline component */}
-        <Timeline/>
+        {/* <Timeline/> */}
+        <Scheduler></Scheduler>
       </Box>
       <Box mt={4}>
         <Typography variant="subtitle1" gutterBottom>
