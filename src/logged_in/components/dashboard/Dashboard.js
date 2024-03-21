@@ -5,8 +5,9 @@ import SettingsArea from "./SettingsArea";
 import UserDataArea from "./UserDataArea";
 import AccountInformationArea from "./AccountInformationArea";
 import StatisticsArea from "./StatisticsArea";
-import GoogleMap from "./GoogleMap";
+import Map from "./GoogleMap";
 import Timeline from './Timeline';
+import SimpleMap from "./GoogleMap";
 
 function Dashboard(props) {
   const {
@@ -56,7 +57,7 @@ function Dashboard(props) {
         <Typography variant="subtitle1" gutterBottom>
           Today's Scheduled Visits
         </Typography>
-        <GoogleMap
+        {/* <Map
           apiKey="AIzaSyBC9lP5hl9rBZbW4jNn-8x_edNzjFfZ3og"
           zoom={14}
           center={{ lat: 51.3813, lng: -2.3625 }}
@@ -67,7 +68,10 @@ function Dashboard(props) {
             { lat: 51.379, lng: -2.376 },
             // Add more pin locations as needed
           ]}
-        />
+        /> */}
+        <SimpleMap>
+          
+        </SimpleMap>
       </Box>
     </Fragment>
   );
