@@ -75,10 +75,14 @@ import GoogleMapReact from 'google-map-react';
 import manImage from './muhammed.jpg';
 import woman1Image from './john.png';
 import woman2Image from './tyrell.jpg';
+import woman3Image from './samantha.jpg';
 
-const CustomMarker = ({ src, lat, lng }) => (
+
+const CustomMarker = ({ patientSrc, carerSrc, lat, lng }) => (
   <div style={{ position: 'absolute', transform: 'translate(-50%, -50%)' }}>
-    <img src={src} alt="Marker" style={{ width: '30px', height: '30px', borderRadius: '100%' }} />
+    {/* <img src={src} alt="Marker" style={{ width: '30px', height: '30px', borderRadius: '100%' }} /> */}
+    <img src={patientSrc} alt="Patient" style={{ width: '40px', height: '40px', borderRadius: '100%' }} />
+    <img src={carerSrc} alt="Carer" style={{ position: 'absolute', bottom: '0', width: '40px', height: '40px', borderRadius: '100%' }} />
   </div>
 );
 
@@ -92,9 +96,11 @@ export default function SimpleMap() {
   };
 
   const markers = [
-    { lat: 51.3853, lng: -2.3535, key: 'marker1', src: manImage },
-    { lat: 51.3835, lng: -2.3625, key: 'marker2', src: woman1Image },
-    { lat: 51.3749, lng: -2.3629, key: 'marker3', src: woman2Image },
+    // { lat: 51.3853, lng: -2.3535, key: 'marker1', src: manImage },
+    // { lat: 51.3835, lng: -2.3625, key: 'marker2', src: woman1Image },
+    // { lat: 51.3749, lng: -2.3629, key: 'marker3', src: woman2Image },
+    { lat: 51.3825, lng: -2.3635, key: 'marker1', patientSrc: manImage, carerSrc: woman1Image },
+    { lat: 51.3875, lng: -2.3685, key: 'marker1', patientSrc: woman2Image, carerSrc: woman3Image },
     // Add more markers as needed
   ];
 
@@ -110,7 +116,9 @@ export default function SimpleMap() {
             key={marker.key}
             lat={marker.lat}
             lng={marker.lng}
-            src={marker.src}
+            // src={marker.src}
+            patientSrc={marker.patientSrc}
+            carerSrc={marker.carerSrc}
           />
         ))}
       </GoogleMapReact>
