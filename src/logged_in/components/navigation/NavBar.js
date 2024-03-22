@@ -307,7 +307,7 @@ function NavBar(props) {
                 display="inline"
                 color="primary"
               >
-                HC
+                HomeCare
               </Typography>
               <Typography
                 variant="h4"
@@ -348,7 +348,7 @@ function NavBar(props) {
                 <ListItemText
                   className={classes.username}
                   primary={
-                    <Typography color="textPrimary">Username</Typography>
+                    <Typography color="textPrimary">Alice Walworth</Typography>
                   }
                 />
               )}

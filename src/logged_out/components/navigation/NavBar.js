@@ -77,7 +77,7 @@ function NavBar(props) {
                 display="inline"
                 color="primary"
               >
-                HC
+                HomeCare
               </Typography>
               <Typography
                 variant="h4"
