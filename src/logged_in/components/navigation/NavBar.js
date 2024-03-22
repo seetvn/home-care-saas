@@ -325,14 +325,15 @@ function NavBar(props) {
             alignItems="center"
             width="100%"
           >
-            {isWidthUpSm && (
+            {/* -- Balance feature not needed --- */}
+            {/* {isWidthUpSm && (
               <Box mr={3}>
                 <Balance
                   balance={2573}
                   openAddBalanceDialog={openAddBalanceDialog}
                 />
               </Box>
-            )}
+            )} */}
             <MessagePopperButton messages={messages} />
             <ListItem
               disableGutters
