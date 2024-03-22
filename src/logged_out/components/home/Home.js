@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import HeadSection from "./HeadSection";
 import FeatureSection from "./FeatureSection";
 import PricingSection from "./PricingSection";
+import ComingSoon from "./ComingSoon";
 
 function Home(props) {
   const { selectHome } = props;
@@ -13,13 +14,14 @@ function Home(props) {
     <Fragment>
       <HeadSection />
       <FeatureSection />
+      <ComingSoon />
       <PricingSection />
     </Fragment>
   );
 }
 
 Home.propTypes = {
-  selectHome: PropTypes.func.isRequired
+  selectHome: PropTypes.func.isRequired,
 };
 
 export default Home;
