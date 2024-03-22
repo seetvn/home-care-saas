@@ -10,7 +10,7 @@ import NewCarerPage from "./carers/NewCarers";
 import Patients from "./patients/Patients"; 
 import Invoices from "./invoices/Invoices"; 
 import Profile from "./profile/Profile"; 
-import PatientProfile from "./patientprofile/PatientProfile"; 
+import VisitProfile from "./profile/VisitProfile"; 
 import PropsRoute from "../../shared/components/PropsRoute";
 import useLocationBlocker from "../../shared/functions/useLocationBlocker";
 
@@ -125,9 +125,9 @@ function Routing(props) {
           selectProfile={selectProfile}
         />
         <PropsRoute
-          path="/c/patientprofile"
-          component={PatientProfile}
-          selectPatientProfile={selectPatientProfile}
+          path="/c/visit_profile"
+          component={VisitProfile}
+          selectProfile={selectProfile}
         />
         <PropsRoute
           path=""
