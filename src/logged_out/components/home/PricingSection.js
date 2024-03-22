@@ -72,7 +72,7 @@ function PricingSection(props) {
                   <Typography display="inline"> / month</Typography>
                 </span>
               }
-              features={["Up to 5 clients", "Annual fee choice", "Eligibility"]}
+              features={["Up to 5 clients", "Annual fee choice", "All features available"]}
             />
           </Grid>
           <Grid
@@ -93,7 +93,7 @@ function PricingSection(props) {
                   <Typography display="inline"> / month</Typography>
                 </span>
               }
-              features={["Up to 12 Clients", "Annual fee choice", "Eligibility"]}
+              features={["Up to 12 Clients", "Annual fee choice", "All features available"]}
             />
           </Grid>
           <Grid
@@ -113,7 +113,7 @@ function PricingSection(props) {
                   <Typography display="inline"> / month</Typography>
                 </span>
               }
-              features={["More than 12 clients", "Annual fee choice", "Eligibility"]}
+              features={["More than 12 clients", "Annual fee choice", "All features available"]}
             />
           </Grid>
         </Grid>

@@ -8,14 +8,13 @@ import BarChartIcon from "@mui/icons-material/BarChart";
 import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import CloudIcon from "@mui/icons-material/Cloud";
-import MeassageIcon from "@mui/icons-material/Message";
-import CancelIcon from "@mui/icons-material/Cancel";
 import calculateSpacing from "./calculateSpacing";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { withTheme } from "@mui/styles";
 import FeatureCard from "./FeatureCard";
 import useWidth from "../../../shared/functions/useWidth";
-
+import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
+import GroupAddIcon from '@mui/icons-material/GroupAdd';
 const iconSize = 30;
 
 const features = [
@@ -37,17 +36,17 @@ const features = [
   },
   {
     color: "#223566",
-    headline: "Messaging System",
-    text: "Facilitate communication between caregivers, clients, and family members through our secure messaging system.",
-    icon: <MeassageIcon style={{ fontSize: iconSize }} />,
+    headline: "Intelligent Rota Modifications",
+    text: "Effortlessly handle cancellations and adjustments with our smart rota management system.",
+    icon: <AutoFixHighIcon style={{ fontSize: iconSize }} />,
     mdDelay: "400",
-    smDelay: "0",
-  },
+    smDelay: "0"
+    },
   {
     color: "#223566",
-    headline: "Task Management",
-    text: "Manage tasks and assignments efficiently with our integrated task management feature.",
-    icon: <ComputerIcon style={{ fontSize: iconSize }} />,
+    headline: "User-Friendly Interface",
+    text: "Enjoy a user-friendly interface designed to simplify navigation and enhance usability.",
+    icon: <SentimentVerySatisfiedIcon style={{ fontSize: iconSize }} />,
     mdDelay: "0",
     smDelay: "200",
   },
@@ -85,9 +84,9 @@ const features = [
   },
   {
     color: "#223566",
-    headline: "User-Friendly Interface",
-    text: "Enjoy a user-friendly interface designed to simplify navigation and enhance usability.",
-    icon: <SentimentVerySatisfiedIcon style={{ fontSize: iconSize }} />,
+    headline: "Coming soon: Carer Recruitment Database",
+    text: "Efficiently grow your care team with our Carer Recruitment Database. Access a pool of qualified caregivers to streamline recruitment.",
+    icon: <GroupAddIcon style={{ fontSize: iconSize }} />,
     mdDelay: "400",
     smDelay: "0",
   },
