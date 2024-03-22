@@ -70,10 +70,24 @@ function NavBar(props) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <div>
-          {/* <img src="public\ms-icon-310x310.png"></img> */}
-          <Paper variant="outlined">
-            <img src="public\ms-icon-310x310.png" />
-          </Paper>
+          <Hidden smDown>
+              <Typography
+                variant="h4"
+                className={classes.brandText}
+                display="inline"
+                color="primary"
+              >
+                HC
+              </Typography>
+              <Typography
+                variant="h4"
+                className={classes.brandText}
+                display="inline"
+                color="secondary"
+              >
+                Manager
+              </Typography>
+            </Hidden>
           </div>
           <div>
             <Hidden mdUp>

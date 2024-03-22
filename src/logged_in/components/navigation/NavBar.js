@@ -106,10 +106,10 @@ const styles = (theme) => ({
     marginRight: theme.spacing(1),
   },
   textPrimary: {
-    color: theme.palette.primary.main,
+    color: theme.palette.secondary.main,
   },
   mobileItemSelected: {
-    backgroundColor: `${theme.palette.primary.main} !important`,
+    backgroundColor: `${theme.palette.secondary.main} !important`,
   },
   brandText: {
     fontFamily: "'Baloo Bhaijaan', cursive",
@@ -170,40 +170,40 @@ function NavBar(props) {
         mobile: <DashboardIcon className="text-white" />,
       },
     },
-    {
-      link: "/c/posts",
-      name: "Posts",
-      onClick: closeMobileDrawer,
-      icon: {
-        desktop: (
-          <ImageIcon
-            className={
-              selectedTab === "Posts" ? classes.textPrimary : "text-white"
-            }
-            fontSize="small"
-          />
-        ),
-        mobile: <ImageIcon className="text-white" />,
-      },
-    },
-    {
-      link: "/c/subscription",
-      name: "Subscription",
-      onClick: closeMobileDrawer,
-      icon: {
-        desktop: (
-          <AccountBalanceIcon
-            className={
-              selectedTab === "Subscription"
-                ? classes.textPrimary
-                : "text-white"
-            }
-            fontSize="small"
-          />
-        ),
-        mobile: <AccountBalanceIcon className="text-white" />,
-      },
-    },
+    // {
+    //   link: "/c/posts",
+    //   name: "Posts",
+    //   onClick: closeMobileDrawer,
+    //   icon: {
+    //     desktop: (
+    //       <ImageIcon
+    //         className={
+    //           selectedTab === "Posts" ? classes.textPrimary : "text-white"
+    //         }
+    //         fontSize="small"
+    //       />
+    //     ),
+    //     mobile: <ImageIcon className="text-white" />,
+    //   },
+    // },
+    // {
+    //   link: "/c/subscription",
+    //   name: "Subscription",
+    //   onClick: closeMobileDrawer,
+    //   icon: {
+    //     desktop: (
+    //       <AccountBalanceIcon
+    //         className={
+    //           selectedTab === "Subscription"
+    //             ? classes.textPrimary
+    //             : "text-white"
+    //         }
+    //         fontSize="small"
+    //       />
+    //     ),
+    //     mobile: <AccountBalanceIcon className="text-white" />,
+    //   },
+    // },
     {
       // New icon added here
       link: "/c/patients",
@@ -238,23 +238,23 @@ function NavBar(props) {
         mobile: <MedicalServicesIcon className="text-white" />,
       },
     },
-    {
-      // New icon added here
-      link: "/c/invoices",
-      name: "Invoices",
-      onClick: closeMobileDrawer,
-      icon: {
-        desktop: (
-          <ReceiptIcon
-            className={
-              selectedTab === "Invoices" ? classes.textPrimary : "text-white"
-            }
-            fontSize="small"
-          />
-        ),
-        mobile: <ReceiptIcon className="text-white" />,
-      },
-    },
+    // {
+    //   // New icon added here
+    //   link: "/c/invoices",
+    //   name: "Invoices",
+    //   onClick: closeMobileDrawer,
+    //   icon: {
+    //     desktop: (
+    //       <ReceiptIcon
+    //         className={
+    //           selectedTab === "Invoices" ? classes.textPrimary : "text-white"
+    //         }
+    //         fontSize="small"
+    //       />
+    //     ),
+    //     mobile: <ReceiptIcon className="text-white" />,
+    //   },
+    // },
     // {
     //   // New icon added here
     //   link: "/c/profile",
@@ -307,7 +307,7 @@ function NavBar(props) {
                 display="inline"
                 color="primary"
               >
-                Wa
+                HC
               </Typography>
               <Typography
                 variant="h4"
@@ -315,7 +315,7 @@ function NavBar(props) {
                 display="inline"
                 color="secondary"
               >
-                Ver
+                Manager
               </Typography>
             </Hidden>
           </Box>
