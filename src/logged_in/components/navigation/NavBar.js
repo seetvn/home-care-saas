@@ -334,7 +334,7 @@ function NavBar(props) {
                 />
               </Box>
             )} */}
-            <MessagePopperButton messages={messages} />
+            {/* <MessagePopperButton messages={messages} /> */}
             <ListItem
               disableGutters
               className={classNames(classes.iconListItem, classes.smBordered)}
@@ -354,15 +354,15 @@ function NavBar(props) {
               )}
             </ListItem>
           </Box>
-          <IconButton
+          {/* <IconButton
             onClick={openDrawer}
             color="primary"
             aria-label="Open Sidedrawer"
             size="large"
-          >
+          > */}
             <SupervisorAccountIcon />
-          </IconButton>
-          <SideDrawer open={isSideDrawerOpen} onClose={closeDrawer} />
+          {/* </IconButton> */}
+          {/* <SideDrawer open={isSideDrawerOpen} onClose={closeDrawer} /> */}
         </Toolbar>
       </AppBar>
       <Hidden smDown>

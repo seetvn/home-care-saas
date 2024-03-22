@@ -95,11 +95,11 @@ function CookieConsent(props) {
       action={
         <Fragment>
           <Box mr={1}>
-            <Button color="primary" onClick={handleCookieRulesDialogOpen}>
+            <Button color="secondary" onClick={handleCookieRulesDialogOpen}>
               More details
             </Button>
           </Box>
-          <Button color="primary" onClick={onAccept}>
+          <Button color="secondary" onClick={onAccept}>
             Got it!
           </Button>
         </Fragment>
