@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { AppBar, Toolbar, Typography, Button, Hidden, IconButton } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, Hidden, IconButton, Icon, SvgIcon, Paper } from "@mui/material";
 import withStyles from '@mui/styles/withStyles';
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
@@ -9,6 +9,7 @@ import HowToRegIcon from "@mui/icons-material/HowToReg";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import BookIcon from "@mui/icons-material/Book";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
+
 
 const styles = theme => ({
   appBar: {
@@ -69,22 +70,10 @@ function NavBar(props) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <div>
-            <Typography
-              variant="h4"
-              className={classes.brandText}
-              display="inline"
-              color="primary"
-            >
-              Wa
-            </Typography>
-            <Typography
-              variant="h4"
-              className={classes.brandText}
-              display="inline"
-              color="secondary"
-            >
-              Ver
-            </Typography>
+          {/* <img src="public\ms-icon-310x310.png"></img> */}
+          <Paper variant="outlined">
+            <img src="public\ms-icon-310x310.png" />
+          </Paper>
           </div>
           <div>
             <Hidden mdUp>
@@ -107,7 +96,7 @@ function NavBar(props) {
                       onClick={handleMobileDrawerClose}
                     >
                       <Button
-                        color="secondary"
+                        color="primary"
                         size="large"
                         classes={{ text: classes.menuButtonText }}
                       >
@@ -118,7 +107,7 @@ function NavBar(props) {
                 }
                 return (
                   <Button
-                    color="secondary"
+                    color="primary"
                     size="large"
                     onClick={element.onClick}
                     classes={{ text: classes.menuButtonText }}

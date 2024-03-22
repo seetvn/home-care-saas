@@ -231,7 +231,7 @@ function Main(props) {
 
   const selectCarers= useCallback(() => {
     smoothScrollTop();
-    document.title = "WaVer - Carers";
+    document.title = "HCM - Carers";
     setSelectedTab("Carers");
     
   }, [
@@ -240,7 +240,7 @@ function Main(props) {
 
   const selectPatients= useCallback(() => {
     smoothScrollTop();
-    document.title = "WaVer - Patients";
+    document.title = "HCM - Patients";
     setSelectedTab("Patients");
     
   }, [
@@ -249,7 +249,7 @@ function Main(props) {
 
   const selectProfile= useCallback(() => {
     smoothScrollTop();
-    document.title = "WaVer - Profile";
+    document.title = "HCM - Profile";
     setSelectedTab("Profile");
     
   }, [
@@ -258,7 +258,7 @@ function Main(props) {
 
   const selectInvoices= useCallback(() => {
     smoothScrollTop();
-    document.title = "WaVer - Invoices";
+    document.title = "HCM - Invoices";
     setSelectedTab("Invoices");
     
   }, [
@@ -269,7 +269,7 @@ function Main(props) {
 
   const selectDashboard = useCallback(() => {
     smoothScrollTop();
-    document.title = "WaVer - Dashboard";
+    document.title = "HCM - Dashboard";
     setSelectedTab("Dashboard");
     if (!hasFetchedCardChart) {
       setHasFetchedCardChart(true);
@@ -288,7 +288,7 @@ function Main(props) {
 
   const selectPosts = useCallback(() => {
     smoothScrollTop();
-    document.title = "WaVer - Posts";
+    document.title = "HCM - Posts";
     setSelectedTab("Posts");
     if (!hasFetchedEmojiTextArea) {
       setHasFetchedEmojiTextArea(true);
@@ -332,7 +332,7 @@ function Main(props) {
 
   const selectSubscription = useCallback(() => {
     smoothScrollTop();
-    document.title = "WaVer - Subscription";
+    document.title = "HCM - Subscription";
     setSelectedTab("Subscription");
   }, [setSelectedTab]);
 

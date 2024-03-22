@@ -47,7 +47,7 @@ function PricingSection(props) {
   const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
-      <Typography variant="h3" align="center" className="lg-mg-bottom">
+      <Typography variant="h3" align="center" className="lg-mg-bottom" style={{color: '#223566'}}>
         Pricing
       </Typography>
       <div className={classNames("container-fluid", classes.containerFix)}>
@@ -60,19 +60,19 @@ function PricingSection(props) {
             item
             xs={12}
             sm={6}
-            lg={3}
+            lg={4}
             className={classes.cardWrapper}
             data-aos="zoom-in-up"
           >
             <PriceCard
-              title="Starter"
+              title="Tier 1"
               pricing={
                 <span>
-                  $14.99
+                  £9
                   <Typography display="inline"> / month</Typography>
                 </span>
               }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
+              features={["Up to 5 clients", "Annual fee choice", "Eligibility"]}
             />
           </Grid>
           <Grid
@@ -80,20 +80,20 @@ function PricingSection(props) {
             className={classes.cardWrapperHighlighted}
             xs={12}
             sm={6}
-            lg={3}
+            lg={4}
             data-aos="zoom-in-up"
             data-aos-delay="200"
           >
             <PriceCard
               highlighted
-              title="Premium"
+              title="Tier 2"
               pricing={
                 <span>
-                  $29.99
+                  £29
                   <Typography display="inline"> / month</Typography>
                 </span>
               }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
+              features={["Up to 12 Clients", "Annual fee choice", "Eligibility"]}
             />
           </Grid>
           <Grid
@@ -101,45 +101,26 @@ function PricingSection(props) {
             className={classes.cardWrapper}
             xs={12}
             sm={6}
-            lg={3}
+            lg={4}
             data-aos="zoom-in-up"
             data-aos-delay={isWidthUpMd ? "400" : "0"}
           >
             <PriceCard
-              title="Business"
+              title="Tier 3"
               pricing={
                 <span>
-                  $49.99
+                  £49
                   <Typography display="inline"> / month</Typography>
                 </span>
               }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
-            />
-          </Grid>
-          <Grid
-            item
-            className={classes.cardWrapper}
-            xs={12}
-            sm={6}
-            lg={3}
-            data-aos="zoom-in-up"
-            data-aos-delay={isWidthUpMd ? "600" : "200"}
-          >
-            <PriceCard
-              title="Tycoon"
-              pricing={
-                <span>
-                  $99.99
-                  <Typography display="inline"> / month</Typography>
-                </span>
-              }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
+              features={["More than 12 clients", "Annual fee choice", "Eligibility"]}
             />
           </Grid>
         </Grid>
       </div>
     </div>
   );
+
 }
 
 PricingSection.propTypes = {};
