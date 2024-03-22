@@ -25,7 +25,7 @@ function Dashboard(props) {
 
   return (
     <Fragment>
-      <StatisticsArea CardChart={CardChart} data={statistics} />
+      {/* <StatisticsArea CardChart={CardChart} data={statistics} /> */}
       <Box mt={4}>
         <Typography variant="subtitle1" gutterBottom>
           Your Account
