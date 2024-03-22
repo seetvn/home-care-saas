@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Typography } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import BuildIcon from "@mui/icons-material/Build";
+import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
 import ComputerIcon from "@mui/icons-material/Computer";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
@@ -86,7 +87,7 @@ const features = [
     color: "#223566",
     headline: "User-Friendly Interface",
     text: "Enjoy a user-friendly interface designed to simplify navigation and enhance usability.",
-    icon: <CancelIcon style={{ fontSize: iconSize }} />,
+    icon: <SentimentVerySatisfiedIcon style={{ fontSize: iconSize }} />,
     mdDelay: "400",
     smDelay: "0",
   },
