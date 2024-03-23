@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Typography } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import BuildIcon from "@mui/icons-material/Build";
-import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
+import SentimentVerySatisfiedIcon from "@mui/icons-material/SentimentVerySatisfied";
 import ComputerIcon from "@mui/icons-material/Computer";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
@@ -13,82 +13,70 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { withTheme } from "@mui/styles";
 import FeatureCard from "./FeatureCard";
 import useWidth from "../../../shared/functions/useWidth";
-import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
-import GroupAddIcon from '@mui/icons-material/GroupAdd';
+import GroupAddIcon from "@mui/icons-material/GroupAdd";
+import MapIcon from "@mui/icons-material/Map";
+import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
+import FilterAltIcon from "@mui/icons-material/FilterAlt";
+import SettingsRemoteIcon from "@mui/icons-material/SettingsRemote";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 const iconSize = 30;
 
 const features = [
   {
     color: "#223566",
-    headline: "Rota Management",
-    text: "Efficiently manage carer schedules and assignments with our intuitive rota management feature.",
+    headline: "User-Friendly Interface",
+    text: "Effortlessly manage client and carer schedules with drag-and-drop functionality.",
     icon: <BuildIcon style={{ fontSize: iconSize }} />,
     mdDelay: "0",
     smDelay: "0",
   },
   {
     color: "#223566",
-    headline: "Calendar Integration",
-    text: "Integrate with calendar tools to streamline appointment scheduling and keep track of important dates.",
-    icon: <CalendarTodayIcon style={{ fontSize: iconSize }} />,
+    headline: "Efficient Sorting and Filtering",
+    text: "Effortlessly organize caregiver and client information by expertise or care type.",
+    icon: <FilterAltIcon style={{ fontSize: iconSize }} />,
     mdDelay: "200",
     smDelay: "200",
   },
   {
     color: "#223566",
-    headline: "Intelligent Rota Modifications",
-    text: "Effortlessly handle cancellations and adjustments with our smart rota management system.",
-    icon: <AutoFixHighIcon style={{ fontSize: iconSize }} />,
+    headline: "Real-Time Schedule Snapshot",
+    text: "Users can access a real-time snapshot of the schedule by viewing the locations of clients and caregivers on the dashboard map.",
+    icon: <MapIcon style={{ fontSize: iconSize }} />,
     mdDelay: "400",
-    smDelay: "0"
-    },
-  {
-    color: "#223566",
-    headline: "User-Friendly Interface",
-    text: "Enjoy a user-friendly interface designed to simplify navigation and enhance usability.",
-    icon: <SentimentVerySatisfiedIcon style={{ fontSize: iconSize }} />,
-    mdDelay: "0",
-    smDelay: "200",
+    smDelay: "400",
   },
   {
     color: "#223566",
-    headline: "Data Analytics",
-    text: "Gain insights into your operations and client outcomes with our comprehensive data analytics tools.",
-    icon: <BarChartIcon style={{ fontSize: iconSize }} />,
-    mdDelay: "200",
-    smDelay: "0",
+    headline: "Automated Backups",
+    text: "Our robust database automatically backs up your data, ensuring reliability and peace of mind.",
+    icon: <VerifiedUserIcon style={{ fontSize: iconSize }} />,
+    mdDelay: "600",
+    smDelay: "600",
+  },
+  {
+    color: "#223566",
+    headline: "Scalable Subscription Plans",
+    text: "Offers flexible subscription plans depending on the number of clients you have.",
+    icon: <MonetizationOnIcon style={{ fontSize: iconSize }} />,
+    mdDelay: "800",
+    smDelay: "800",
   },
   {
     color: "#223566",
     headline: "Support Services",
     text: "Access support services and resources to enhance the quality of care provided to clients.",
     icon: <HeadsetMicIcon style={{ fontSize: iconSize }} />,
-    mdDelay: "400",
-    smDelay: "200",
+    mdDelay: "1000",
+    smDelay: "1000",
   },
   {
     color: "#223566",
     headline: "Cloud Storage",
     text: "Securely store and access client data anytime, anywhere with our cloud storage solution.",
     icon: <CloudIcon style={{ fontSize: iconSize }} />,
-    mdDelay: "0",
-    smDelay: "0",
-  },
-  {
-    color: "#223566",
-    headline: "Customization Options",
-    text: "Customize the platform to suit your agency's unique requirements and workflows.",
-    icon: <CodeIcon style={{ fontSize: iconSize }} />,
-    mdDelay: "200",
-    smDelay: "200",
-  },
-  {
-    color: "#223566",
-    headline: "Coming soon: Carer Recruitment Database",
-    text: "Efficiently grow your care team with our Carer Recruitment Database. Access a pool of qualified caregivers to streamline recruitment.",
-    icon: <GroupAddIcon style={{ fontSize: iconSize }} />,
-    mdDelay: "400",
-    smDelay: "0",
+    mdDelay: "1200",
+    smDelay: "1200",
   },
 ];
 

@@ -15,81 +15,49 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { withTheme } from "@mui/styles";
 import FeatureCard from "./FeatureCard";
 import useWidth from "../../../shared/functions/useWidth";
+import GroupAddIcon from "@mui/icons-material/GroupAdd";
+import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
+import ContactsIcon from "@mui/icons-material/Contacts";
+import AutorenewIcon from "@mui/icons-material/Autorenew";
+import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
+import AppsIcon from "@mui/icons-material/Apps";
+import DescriptionIcon from "@mui/icons-material/Description";
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 
 const iconSize = 30;
 
 const features = [
   {
     color: "#223566",
-    headline: "Rota Management",
-    text: "Efficiently manage carer schedules and assignments with our intuitive rota management feature.",
-    icon: <BuildIcon style={{ fontSize: iconSize }} />,
+    headline: "Find Local Carers Easily",
+    text: "Discover nearby carers looking for work with our integrated database, making hiring hassle-free.",
+    icon: <ContactsIcon style={{ fontSize: iconSize }} />,
     mdDelay: "0",
     smDelay: "0",
   },
   {
     color: "#223566",
-    headline: "Calendar Integration",
-    text: "Integrate with calendar tools to streamline appointment scheduling and keep track of important dates.",
-    icon: <CalendarTodayIcon style={{ fontSize: iconSize }} />,
+    headline: "Smart Matches & Easy Scheduling",
+    text: "Our AI-powered system suggests the best carers for your clients and streamlines scheduling, saving you time and effort.",
+    icon: <AutoFixHighIcon style={{ fontSize: iconSize }} />,
     mdDelay: "200",
     smDelay: "200",
   },
   {
     color: "#223566",
-    headline: "Messaging System",
-    text: "Facilitate communication between caregivers, clients, and family members through our secure messaging system.",
-    icon: <MeassageIcon style={{ fontSize: iconSize }} />,
+    headline: "Visit Logging App",
+    text: "Caregivers can effortlessly log their visits and share updates with family members, ensuring transparency and peace of mind.",
+    icon: <PhoneIphoneIcon style={{ fontSize: iconSize }} />,
     mdDelay: "400",
-    smDelay: "0",
+    smDelay: "400",
   },
   {
     color: "#223566",
-    headline: "Task Management",
-    text: "Manage tasks and assignments efficiently with our integrated task management feature.",
-    icon: <ComputerIcon style={{ fontSize: iconSize }} />,
-    mdDelay: "0",
-    smDelay: "200",
-  },
-  {
-    color: "#223566",
-    headline: "Data Analytics",
-    text: "Gain insights into your operations and client outcomes with our comprehensive data analytics tools.",
-    icon: <BarChartIcon style={{ fontSize: iconSize }} />,
-    mdDelay: "200",
-    smDelay: "0",
-  },
-  {
-    color: "#223566",
-    headline: "Support Services",
-    text: "Access support services and resources to enhance the quality of care provided to clients.",
-    icon: <HeadsetMicIcon style={{ fontSize: iconSize }} />,
-    mdDelay: "400",
-    smDelay: "200",
-  },
-  {
-    color: "#223566",
-    headline: "Cloud Storage",
-    text: "Securely store and access client data anytime, anywhere with our cloud storage solution.",
-    icon: <CloudIcon style={{ fontSize: iconSize }} />,
-    mdDelay: "0",
-    smDelay: "0",
-  },
-  {
-    color: "#223566",
-    headline: "Customization Options",
-    text: "Customize the platform to suit your agency's unique requirements and workflows.",
-    icon: <CodeIcon style={{ fontSize: iconSize }} />,
-    mdDelay: "200",
-    smDelay: "200",
-  },
-  {
-    color: "#223566",
-    headline: "User-Friendly Interface",
-    text: "Enjoy a user-friendly interface designed to simplify navigation and enhance usability.",
-    icon: <SentimentVerySatisfiedIcon style={{ fontSize: iconSize }} />,
-    mdDelay: "400",
-    smDelay: "0",
+    headline: "Generate Invoices",
+    text: "Effortlessly create invoices with just a single click, saving you time and streamlining your billing process.",
+    icon: <DescriptionIcon style={{ fontSize: iconSize }} />,
+    mdDelay: "600",
+    smDelay: "600",
   },
 ];
 
