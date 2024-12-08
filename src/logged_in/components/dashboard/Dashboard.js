@@ -59,7 +59,7 @@ function Dashboard(props) {
           Today's Scheduled Visits
         </Typography>
         {/* <Map
-          apiKey="AIzaSyBC9lP5hl9rBZbW4jNn-8x_edNzjFfZ3og"
+          apiKey="" //key no longer valid
           zoom={14}
           center={{ lat: 51.3813, lng: -2.3625 }}
           pinLocations={[
